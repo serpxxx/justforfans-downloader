@@ -1,314 +1,173 @@
-# JustForFans Downloader Browser Extension (Chrome, Firefox, Edge, Opera, Brave)
+# JustForFans Downloader  (Browser Extension)
 
+> Browser extension purpose-built for saving content from JustForFans — videos, images, galleries, and text posts — directly in your browser with no extra software required.
 
-## Related
+SERP JustForFans Downloader is a browser extension built specifically for saving content from JustForFans as standard MP4 and full-resolution image files.
 
----
-<details>
-<summary>
-  Research
-</summary>
-# How to Download JustForFans Videos: Technical Analysis of Stream Patterns, CDNs, and Download Methods
-*A comprehensive research document analyzing JustForFans's video infrastructure, embed patterns, stream formats, and optimal download strategies using modern tools*
-**Authors**: SERP Apps  
-**Date**: December 2025  
-**Version**: 1.0
----
-- [JustForFans Downloader gist](https://gist.github.com/devinschumacher/948cdae40dd4de68f6631aa9cdbc3e07)
-## Abstract
+- Save videos, images, galleries, and text posts from any creator's JustForFans feed for offline viewing
+- Download all visible content from a feed page in one click with "Download Visible" bulk action
+- Skip generic tools that fail on JustForFans' protected streaming and encrypted playback — this extension handles it natively
+- Downloads auto-organize into a dedicated JustForFans subfolder so your files stay tidy
 
-This research document outlines JustForFans' authenticated video delivery, signed HLS manifests, and best practices for downloading content with user-provided credentials.
+If you subscribe to creators on JustForFans and want to download videos, images, and text posts for offline viewing, this extension handles it all directly in your browser.
 
-## Table of Contents
+## 🔗 Links
 
-1. [Introduction](#1-introduction)
-2. [JustForFans Video Infrastructure Overview](#2-justforfans-video-infrastructure-overview)
-3. [URL Patterns and Detection](#3-url-patterns-and-detection)
-4. [Stream Formats and CDN Analysis](#4-stream-formats-and-cdn-analysis)
-5. [yt-dlp Implementation Strategies](#5-yt-dlp-implementation-strategies)
-6. [FFmpeg Processing Techniques](#6-ffmpeg-processing-techniques)
-7. [Alternative Tools and Backup Methods](#7-alternative-tools-and-backup-methods)
-8. [JustForFans API Integration](#8-justforfans-api-integration)
-9. [Implementation Recommendations](#9-implementation-recommendations)
-10. [Troubleshooting and Edge Cases](#10-troubleshooting-and-edge-cases)
-11. [Conclusion](#11-conclusion)
+- 🎁 Get it [**here**](https://serp.cc/VDM-justforfans-downloader)
+- 📄 Product page [**here**](https://serp.ly/justforfans-downloader)
+- ❓ Check FAQs [**here**](https://help.serp.co/en/)
+- 🐛 Report bugs [**here**](https://github.com/serpapps/justforfans-downloader/issues)
+- 🆕 Request features [**here**](https://github.com/serpapps/justforfans-downloader/discussions)
+- 📦 Latest release [**here**](https://github.com/serpapps/justforfans-downloader/releases/latest)
 
----
+## Resources
 
-## 1. Introduction
+- 💬 [**Community**](https://community.serp.co)
+- 💌 [**Newsletter**](https://newsletter.serp.co)
+- 🛒 [**Shop**](https://store.serp.co)
+- 🎓 [**Courses**](https://courses.serp.co)
 
-JustForFans is a subscription-based platform with strong access controls. Media URLs are typically signed and require authenticated cookies for access.
+## Why JustForFans Downloader
 
-### 1.1 Research Scope
+JustForFans delivers video through protected streaming formats and encrypted playback, so there is no way to right-click and save content the way you normally would. Media URLs are temporary and token-locked, meaning they expire and cannot be reused. Gallery and carousel posts hide images behind extra layers that require expansion before anything can be saved. On top of that, generic download tools have no understanding of how JustForFans organizes its feed — they miss videos, skip galleries, and ignore text posts entirely. This extension was built specifically to solve every one of those problems, automatically and inside your browser.
 
-- JustForFans posts and video pages
-- Signed HLS manifests and MP4 fallbacks
-- Authentication and token lifetimes
+## Features
 
-### 1.2 Methodology
+- **Feed-aware scanning** — Automatically detects videos, images, galleries, and text posts on any creator page
+- **Per-post download button** — Added directly to every item in the feed for targeted saves
+- **"Download Visible" bulk action** — Save all on-screen content with a single click
+- **Automatic stream-to-MP4 conversion** — Every video plays on any device
+- **Gallery and carousel expansion** — Captures every image in multi-image posts
+- **Quality selector** — All available video resolutions, sorted highest first
+- **Real-time progress bar** — Shows download speed and file size
+- **Right-click context menu** — Quick video saves without opening a popup
+- **Desktop notifications** — Get notified when downloads finish, even if the browser is in the background
+- **Auto-organized saves** — Files land in a dedicated JustForFans subfolder inside your Downloads directory
+- **Tabbed popup** — Browse Videos, Images, and Text Posts separately
+- **Cross-browser support** — Works on Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox
 
-- Capture network requests while authenticated
-- Inspect API responses for media URLs
-- Validate HLS assets with ffprobe
+## How It Works
 
----
+1. **Install** — Add SERP JustForFans Downloader to your browser from the [product page](https://serp.ly/justforfans-downloader), or download the latest version from [GitHub Releases](https://github.com/serpapps/justforfans-downloader/releases/latest) and load it manually
+2. **Sign in** — Enter your email and verify with a one-time code. No password is stored.
+3. **Browse a creator's feed** — Go to JustForFans, open any creator page, and scroll through their posts. The extension automatically detects every video, image, gallery, and text post on screen.
+4. **Save what you want** — Click "Download Visible" to grab everything at once, use the per-post download button for individual items, or right-click any video for a quick save. Files go straight to your Downloads/JustForFans folder.
 
-## 2. JustForFans Video Infrastructure Overview
+## Supported Formats
 
-### 2.1 Video Hosting Types
+Videos are saved as standard MP4 files that play on any device or media player. Protected and encrypted streams are converted automatically. Images are saved at full resolution. Multiple quality levels are detected from the source, and you can choose your preferred resolution before downloading.
 
-- HLS playlists (primary)
-- MP4 fallbacks for some content
+## Step-by-Step Tutorial: How to Download Videos from JustForFans
 
-### 2.2 CDN Architecture
+Downloading from JustForFans is tricky because the platform uses protected streaming and encrypted playback. SERP JustForFans Downloader removes that complexity entirely.
 
-- justfor.fans domain with signed media URLs
-- CDN hostnames vary by region
+**What you need:** A supported browser — Chrome, Edge, Brave, Firefox, or Opera — an internet connection, and an active JustForFans subscription to access creator content.
 
-### 2.3 Video Processing Pipeline
+**Step 1 — Install the extension.** Add SERP JustForFans Downloader from your browser's extension store. Alternatively, download the latest release from [GitHub](https://github.com/serpapps/justforfans-downloader/releases/latest) and load it manually in your browser's extension settings. It takes a few seconds and no extra software is needed.
 
-1. User loads post while authenticated
-2. Client requests media metadata
-3. Signed HLS URLs returned
-4. Client fetches playlist and segments
+**Step 2 — Sign in.** Click the extension icon and enter your email. You will receive a one-time verification code — enter it to activate your 3 free trial downloads. No credit card needed and no password to remember.
 
-### 2.4 Access Control and Authentication
+**Step 3 — Browse content on JustForFans.** Navigate to a creator's page and scroll through their feed. The extension scans visible posts and organizes them into Videos, Images, and Text tabs inside the popup.
 
-- Requires logged-in session cookies
-- Signed URLs expire quickly
+**Step 4 — Download.** Use "Download Visible" to save JustForFans videos in bulk, click the per-post button for targeted saves, or right-click any video for a quick download to MP4. Everything saves to your Downloads/JustForFans folder automatically.
 
----
+**Tips:** Use the tabs in the popup to filter by content type. After scrolling to load more posts, click "Rescan" to pick up new items. Desktop notifications let you know when each download finishes.
 
-## 3. URL Patterns and Detection
+**Troubleshooting:** If the extension is not finding content, scroll through the feed first — posts must be visible on the page. Click "Rescan" after loading more. Make sure the extension is enabled in your browser. For encrypted content, try refreshing the page and downloading again.
 
-### 3.1 Watch Page URL Patterns
+## Who It's For
 
-```
-https://justfor.fans/<creator>
-https://justfor.fans/posts/<id>
-```
+- **JustForFans subscribers** who want to save creator content for offline viewing without installing desktop software or learning technical tools
+- **Non-technical users** who need a straightforward, install-and-go solution that works inside the browser
+- **Bulk savers** who want to download an entire feed page of content in one click rather than saving items one at a time
+- **Organized collectors** who prefer files automatically sorted into a dedicated folder rather than scattered across a Downloads directory
 
-### 3.2 Embed URL Patterns
+## Common Use Cases
 
-```
-https://justfor.fans/player/<id>
-```
+- Save videos from a creator's JustForFans feed for offline viewing
+- Download all visible content from a feed page in one click with "Download Visible"
+- Save images and gallery posts at full resolution, including multi-image carousel posts
+- Capture text posts alongside media for a complete archive
+- Download in your preferred video quality from all available resolutions
+- Use the per-post download button for targeted saves on individual items
+- Right-click any video to download via context menu for the quickest workflow
 
-### 3.3 Direct Media and CDN URL Patterns
+## What Makes JustForFans Downloader Different
 
-```
-https://cdn*.justfor.fans/<path>/master.m3u8
-https://cdn*.justfor.fans/<path>/<quality>.mp4
-```
+Generic downloaders have no understanding of how JustForFans structures its content. They miss videos, skip galleries, and ignore text posts entirely. SERP JustForFans Downloader is feed-aware and built from the ground up for this platform.
 
-### 3.4 Regex Patterns for URL Extraction
+- **Feed-aware scanning** — Detects videos, images, galleries, and text posts that generic tools miss entirely
+- **Download button on every post** — No fumbling with popups or menus. Every feed item gets its own save button.
+- **Bulk save in one shot** — Click "Download Visible" and everything on screen saves at once. Scroll down, rescan, and repeat.
+- **Handles encrypted and protected streams** — Automatically converts protected video to standard MP4 files that play anywhere, with no extra steps
+- **No external software** — No desktop apps, no command line, no third-party websites. Just a browser extension that works where you already browse.
+- **Organized saves** — Files auto-save to a dedicated JustForFans folder so your Downloads directory stays clean
+- **Free trial** — 3 downloads included with no credit card required, so you can verify it works before committing
 
-```regex
-justfor\\.fans/posts/(\\d+)
-\\.m3u8\\?
-```
+## Trial & Pricing
 
-### 3.5 Command-line URL Extraction
+3 free downloads are included — no credit card required. Sign in with your email, verify with a one-time code, and your trial is ready immediately. Upgrade to a license for unlimited downloads at the [product page](https://serp.ly/justforfans-downloader).
 
-```bash
-grep -oE "https?://[^'\" ]+\.m3u8[^'\" ]*" page.html | sort -u
-```
+- Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex
+- Secure one-time-passcode sign-in — no passwords stored
+- All processing happens locally in your browser
+- Downloads auto-save to an organized JustForFans subfolder
+- Automatic update notifications for new versions
 
----
+## FAQ
 
-## 4. Stream Formats and CDN Analysis
+### Q: How do I download content from JustForFans?
 
-### 4.1 Stream Formats
+Go to any creator's page on JustForFans. Click the extension icon to see detected content organized by type (Videos, Images, Text). Click "Download Visible" to save everything, or use the download button on individual posts.
 
-| Format | Extension | Notes |
-|--------|-----------|-------|
-| HLS (adaptive) | .m3u8 | Primary streaming format with signed URLs |
-| MP4 (progressive) | .mp4 | Available for some posts |
+### Q: What types of content can I download?
 
-### 4.2 Typical Quality Ladder
+Videos (saved as MP4), images (full resolution, including gallery and carousel posts), and text posts.
 
-| Quality | Typical Resolution | Notes |
-|---------|--------------------|-------|
-| Low | 360p - 480p | Fast preview streams or mobile variants |
-| Medium | 720p | Common default for web playback |
-| High | 1080p+ | Available when source uploads are higher quality |
+### Q: What quality options are available?
 
-### 4.3 CDN URL Construction and Query Parameters
+The extension detects all available video qualities from the source. Formats are sorted by quality with the highest first and MP4 preferred.
 
-- Signed URLs include query parameters and short TTLs
-- Headers and cookies are required
+### Q: What format are downloaded videos?
 
-### 4.4 Validation and Inspection Commands
+All videos are saved as standard MP4 files that play on any device or media player. Protected and encrypted streams are converted automatically.
 
-```bash
-ffprobe -hide_banner -i "playlist.m3u8"
-```
+### Q: Where are my downloads saved?
 
----
+Content automatically saves to a JustForFans subfolder inside your browser's default Downloads directory.
 
-## 5. yt-dlp Implementation Strategies
+### Q: How many free downloads do I get?
 
-yt-dlp can download HLS manifests when provided with authenticated cookies and headers.
+You get 3 free trial downloads after signing in with your email. After that, purchase a license for unlimited downloads.
 
-### 5.1 Basic Usage
+### Q: Does this work on Firefox?
 
-```bash
-yt-dlp [OPTIONS] [--] URL [URL...]
-yt-dlp -F "https://example.com/watch/123"
-```
+Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.
 
-### 5.2 Authentication and Cookies
+### Q: Why isn't the extension finding my content?
 
-- Use --cookies-from-browser to carry session cookies
-- Use --add-header 'Referer: https://justfor.fans/'
+Scroll through the creator's feed to load content first. The extension scans visible posts on the page. If issues persist, click the "Rescan" button or refresh the page.
 
-### 5.3 Format Selection and Output Templates
+### Q: Can I download gallery or carousel posts?
 
-```bash
-yt-dlp -f bestvideo+bestaudio/best "URL"
-yt-dlp -o "%(title)s.%(ext)s" "URL"
-yt-dlp --download-archive archive.txt "URL"
-```
+Yes. The extension automatically expands gallery and carousel posts to capture all images in multi-image posts.
 
-### 5.4 Site-Specific Examples
+### Q: Is my data safe?
 
-```bash
-yt-dlp --cookies-from-browser chrome "https://justfor.fans/posts/<id>"
-yt-dlp "https://cdn*.justfor.fans/<path>/master.m3u8"
-```
+Yes. All processing happens entirely in your browser — nothing is uploaded. Authentication uses secure one-time codes with no passwords stored.
 
-### 5.5 Batch and Archive Mode
+### Q: What if a video uses encryption?
 
-```bash
-yt-dlp -a urls.txt --download-archive archive.txt
-yt-dlp --no-overwrites --continue "URL"
-```
+The extension includes support for decrypting protected streams commonly used on JustForFans. Most protected content can be downloaded and saved as MP4.
 
-### 5.6 Error Handling Patterns
+## Important Notes
 
-- If 403, refresh cookies and re-fetch playlist
+Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. A valid JustForFans subscription is required to access creator content. Content must be visible on the page, so scroll to load more items before downloading. Quality depends on what the source provides. An active internet connection is required.
 
----
+## Keywords
 
-## 6. FFmpeg Processing Techniques
+`justforfans downloader` `justforfans video downloader` `download justforfans` `justforfans mp4` `justforfans browser extension` `save justforfans videos` `justforfans image downloader`
 
-FFmpeg can remux HLS playlists into MP4 once you have a valid manifest URL.
+## Get It
 
-### 6.1 Inspect and Validate Streams
-
-```bash
-ffmpeg -i "playlist.m3u8" -c copy output.mp4
-```
-
-### 6.2 Common Remux and Repair Patterns
-
-```bash
-ffmpeg -i "playlist.m3u8" -c copy output.mp4
-ffmpeg -i input.mp4 -c copy -movflags +faststart output.mp4
-ffprobe -hide_banner -show_streams output.mp4
-```
-
----
-
-## 7. Alternative Tools and Backup Methods
-
-### 7.1 Streamlink
-
-```bash
-streamlink "https://justfor.fans/posts/<id>" best -o output.mp4
-```
-
-### 7.2 aria2c
-
-```bash
-aria2c -i urls.txt -j 4
-```
-
-### 7.3 gallery-dl
-
-```bash
-gallery-dl --cookies-from-browser chrome "https://justfor.fans/posts/<id>"
-```
-
-### 7.4 Browser DevTools
-
-- Filter Network for m3u8 requests
-- Copy playlist URL with headers to use in tools
-
----
-
-## 8. JustForFans API Integration
-
-### 8.1 Known Endpoints
-
-- None documented; rely on page and player data extraction
-
-### 8.2 Example Requests
-
-```
-# No public API calls identified; extract URLs from HTML/player data
-```
-
-### 8.3 Token and Session Handling
-
-- Use authenticated endpoints only; no public API documented
-
----
-
-## 9. Implementation Recommendations
-
-### 9.1 Detection Hierarchy
-
-- Find HLS playlist URL from network requests
-- Fallback to MP4 URL if present
-
-### 9.2 Site-Specific Notes
-
-- Require user login for any download action
-- Refresh URLs if they expire
-
-### 9.3 Storage and Naming Strategy
-
-- Include creator name and post ID in filename
-
----
-
-## 10. Troubleshooting and Edge Cases
-
-- Signed URLs expire quickly; avoid long delays
-
----
-
-## 11. Conclusion
-
-JustForFans uses signed HLS playlists behind authentication. Download implementations should rely on user sessions, capture fresh playlist URLs, and use yt-dlp or ffmpeg to produce MP4 outputs.
-
-| Tool | Best Use Case | Notes |
-|------|---------------|-------|
-| yt-dlp | Primary downloader for MP4/HLS | Supports cookies, format selection, retries |
-| ffmpeg | Remuxing and validation | Useful for HLS to MP4 conversion |
-| streamlink | Live/HLS fallback | Streams to file or pipes into ffmpeg |
-| aria2c | Multi-connection HTTP/HLS downloads | Good for large files and retries |
-| gallery-dl | Image-first or gallery-heavy sites | Best for gallery or attachment extraction |
-
-
----
-
-## Disclaimer and Ethical Use
-
-This document is provided for lawful, personal, or authorized use cases only. Always respect the site terms of service, content creator rights, and applicable laws. If DRM or explicit access controls are present, do not attempt to bypass them; use official downloads or creator-provided access instead.
-
-## Last Updated
-
-December 2025
-
-## Next Review
-
-90 days from last update or when site playback changes are observed.
-
-## Related
-
-- SERP Apps research index (internal)
-- SERP extension downloaders (internal)
-
-</details>
+- **Start here:** [SERP JustForFans Downloader](https://serp.cc/VDM-justforfans-downloader)
