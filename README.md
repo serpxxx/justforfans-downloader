@@ -14,7 +14,6 @@ If you subscribe to creators on JustForFans and want to download videos, images,
 ## 🔗 Links
 
 - 🎁 Get it [**here**](https://serp.ly/justforfans-downloader)
-- 📄 Product page [**here**](https://serp.ly/justforfans-downloader)
 - ❓ Check FAQs [**here**](https://help.serp.co/en/)
 - 🐛 Report bugs [**here**](https://github.com/serpapps/justforfans-downloader/issues)
 - 🆕 Request features [**here**](https://github.com/serpapps/justforfans-downloader/discussions)
