@@ -1,172 +1,174 @@
-# JustForFans Downloader  (Browser Extension)
+# JustForFans Downloader (Browser Extension)
 
-> Browser extension purpose-built for saving content from JustForFans — videos, images, galleries, and text posts — directly in your browser with no extra software required.
+> Save JustForFans videos, images, galleries, and text posts from creator feeds directly in your browser.
 
-SERP JustForFans Downloader is a browser extension built specifically for saving content from JustForFans as standard MP4 and full-resolution image files.
+JustForFans Downloader is a browser extension built specifically for saving supported JustForFans content in a cleaner, browser-native workflow. It can detect videos, images, gallery posts, and text from visible feed items, organize them by content type, and export video as MP4 for easier offline viewing.
 
-- Save videos, images, galleries, and text posts from any creator's JustForFans feed for offline viewing
-- Download all visible content from a feed page in one click with "Download Visible" bulk action
-- Skip generic tools that fail on JustForFans' protected streaming and encrypted playback — this extension handles it natively
-- Downloads auto-organize into a dedicated JustForFans subfolder so your files stay tidy
+- Save JustForFans videos, images, galleries, and text posts
+- Download all visible feed content in one pass with a bulk action
+- Export supported video streams as MP4 files
+- Keep downloads organized in a dedicated JustForFans folder
+- Skip generic tools that miss protected or feed-scoped media
 
-If you subscribe to creators on JustForFans and want to download videos, images, and text posts for offline viewing, this extension handles it all directly in your browser.
+## Links
 
-## 🔗 Links
+- :rocket: Get it here: [JustForFans Downloader](https://serp.ly/justforfans-downloader)
+- :new: Latest release: [GitHub Releases](https://github.com/serpapps/justforfans-downloader/releases/latest)
+- :question: Help center: [SERP Help](https://help.serp.co/en/)
+- :beetle: Report bugs: [GitHub Issues](https://github.com/serpapps/justforfans-downloader/issues)
+- :bulb: Request features: [Feature Requests](https://github.com/serpapps/justforfans-downloader/discussions)
 
-- 🎁 Get it [**here**](https://serp.ly/justforfans-downloader)
-- ❓ Check FAQs [**here**](https://help.serp.co/en/)
-- 🐛 Report bugs [**here**](https://github.com/serpapps/justforfans-downloader/issues)
-- 🆕 Request features [**here**](https://github.com/serpapps/justforfans-downloader/discussions)
-- 📦 Latest release [**here**](https://github.com/serpapps/justforfans-downloader/releases/latest)
+## Preview
 
-## Resources
+![JustForFans Downloader workflow preview](assets/workflow-preview.webp)
 
-- 💬 [**Community**](https://community.serp.co)
-- 💌 [**Newsletter**](https://newsletter.serp.co)
-- 🛒 [**Shop**](https://store.serp.co)
-- 🎓 [**Courses**](https://courses.serp.co)
+## Table of Contents
+
+- [Why JustForFans Downloader](#why-justforfans-downloader)
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Step-by-Step Tutorial: How to Download Content from JustForFans](#step-by-step-tutorial-how-to-download-content-from-justforfans)
+- [Supported Formats](#supported-formats)
+- [Who It's For](#who-its-for)
+- [Common Use Cases](#common-use-cases)
+- [Troubleshooting](#troubleshooting)
+- [Trial and Access](#trial-and-access)
+- [Installation Instructions](#installation-instructions)
+- [FAQ](#faq)
+- [License](#license)
+- [Notes](#notes)
+- [About JustForFans](#about-justforfans)
 
 ## Why JustForFans Downloader
 
-JustForFans delivers video through protected streaming formats and encrypted playback, so there is no way to right-click and save content the way you normally would. Media URLs are temporary and token-locked, meaning they expire and cannot be reused. Gallery and carousel posts hide images behind extra layers that require expansion before anything can be saved. On top of that, generic download tools have no understanding of how JustForFans organizes its feed — they miss videos, skip galleries, and ignore text posts entirely. This extension was built specifically to solve every one of those problems, automatically and inside your browser.
+JustForFans content is not limited to one simple file type. Videos can rely on protected playback, galleries require expansion, and text posts live alongside media in the same feed. Generic downloaders usually ignore half that structure. They miss gallery images, skip feed text, or fail once the video is delivered through a protected player.
+
+JustForFans Downloader is built for the actual feed workflow. It scans visible posts, groups content by type, and gives you direct save options for videos, images, galleries, and text from the same page.
 
 ## Features
 
-- **Feed-aware scanning** — Automatically detects videos, images, galleries, and text posts on any creator page
-- **Per-post download button** — Added directly to every item in the feed for targeted saves
-- **"Download Visible" bulk action** — Save all on-screen content with a single click
-- **Automatic stream-to-MP4 conversion** — Every video plays on any device
-- **Gallery and carousel expansion** — Captures every image in multi-image posts
-- **Quality selector** — All available video resolutions, sorted highest first
-- **Real-time progress bar** — Shows download speed and file size
-- **Right-click context menu** — Quick video saves without opening a popup
-- **Desktop notifications** — Get notified when downloads finish, even if the browser is in the background
-- **Auto-organized saves** — Files land in a dedicated JustForFans subfolder inside your Downloads directory
-- **Tabbed popup** — Browse Videos, Images, and Text Posts separately
-- **Cross-browser support** — Works on Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox
+- Feed-aware scanning for videos, images, galleries, and text
+- Per-post download controls for targeted saves
+- Bulk "Download Visible" action for on-screen feed content
+- Converts HLS streams and DASH encrypted video to MP4 in-browser
+- MP4 export for supported video playback flows
+- Gallery expansion support for multi-image posts
+- Quality selector with all available video resolutions
+- Right-click context menu for quick video downloads
+- Download organization into a JustForFans folder
+- Tabbed popup UI for browsing Videos, Images, and Text Posts separately
+- Cross-browser support for Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex
 
 ## How It Works
 
-1. **Install** — Add SERP JustForFans Downloader to your browser from the [product page](https://serp.ly/justforfans-downloader), or download the latest version from [GitHub Releases](https://github.com/serpapps/justforfans-downloader/releases/latest) and load it manually
-2. **Sign in** — Enter your email and verify with a one-time code. No password is stored.
-3. **Browse a creator's feed** — Go to JustForFans, open any creator page, and scroll through their posts. The extension automatically detects every video, image, gallery, and text post on screen.
-4. **Save what you want** — Click "Download Visible" to grab everything at once, use the per-post download button for individual items, or right-click any video for a quick save. Files go straight to your Downloads/JustForFans folder.
+1. Install the extension from the latest release.
+2. Sign in with your email and verify using a one-time code.
+3. Open a JustForFans creator page and scroll through the feed.
+4. Let the extension scan visible posts.
+5. Open the popup to review Videos, Images, and Text tabs.
+6. Save individual posts or use the bulk action to download everything currently visible.
+7. Check your Downloads/JustForFans folder for saved content.
+
+## Step-by-Step Tutorial: How to Download Content from JustForFans
+
+1. Install JustForFans Downloader in your browser.
+2. Open the extension and complete email sign-in with the one-time verification code.
+3. Go to a creator page on JustForFans and scroll through the content you want to save.
+4. Open the popup to review Videos, Images, and Text tabs.
+5. Use the per-post download button for individual items or "Download Visible" to bulk save everything currently on screen.
+6. For videos, choose the available quality if more than one option appears.
+7. After scrolling to load more content, click the Rescan button to detect new posts.
+8. Open the saved content from your Downloads/JustForFans folder.
 
 ## Supported Formats
 
-Videos are saved as standard MP4 files that play on any device or media player. Protected and encrypted streams are converted automatically. Images are saved at full resolution. Multiple quality levels are detected from the source, and you can choose your preferred resolution before downloading.
+- Video output: MP4
+- Image output: original downloadable image files where supported
+- Text output: saved text post content
 
-## Step-by-Step Tutorial: How to Download Videos from JustForFans
-
-Downloading from JustForFans is tricky because the platform uses protected streaming and encrypted playback. SERP JustForFans Downloader removes that complexity entirely.
-
-**What you need:** A supported browser — Chrome, Edge, Brave, Firefox, or Opera — an internet connection, and an active JustForFans subscription to access creator content.
-
-**Step 1 — Install the extension.** Add SERP JustForFans Downloader from your browser's extension store. Alternatively, download the latest release from [GitHub](https://github.com/serpapps/justforfans-downloader/releases/latest) and load it manually in your browser's extension settings. It takes a few seconds and no extra software is needed.
-
-**Step 2 — Sign in.** Click the extension icon and enter your email. You will receive a one-time verification code — enter it to activate your 3 free trial downloads. No credit card needed and no password to remember.
-
-**Step 3 — Browse content on JustForFans.** Navigate to a creator's page and scroll through their feed. The extension scans visible posts and organizes them into Videos, Images, and Text tabs inside the popup.
-
-**Step 4 — Download.** Use "Download Visible" to save JustForFans videos in bulk, click the per-post button for targeted saves, or right-click any video for a quick download to MP4. Everything saves to your Downloads/JustForFans folder automatically.
-
-**Tips:** Use the tabs in the popup to filter by content type. After scrolling to load more posts, click "Rescan" to pick up new items. Desktop notifications let you know when each download finishes.
-
-**Troubleshooting:** If the extension is not finding content, scroll through the feed first — posts must be visible on the page. Click "Rescan" after loading more. Make sure the extension is enabled in your browser. For encrypted content, try refreshing the page and downloading again.
+Video files use MP4 so they are easier to replay on standard media players, move between devices, or archive locally. HLS and DASH streams are converted automatically.
 
 ## Who It's For
 
-- **JustForFans subscribers** who want to save creator content for offline viewing without installing desktop software or learning technical tools
-- **Non-technical users** who need a straightforward, install-and-go solution that works inside the browser
-- **Bulk savers** who want to download an entire feed page of content in one click rather than saving items one at a time
-- **Organized collectors** who prefer files automatically sorted into a dedicated folder rather than scattered across a Downloads directory
+- JustForFans subscribers who want offline access to content they can already view
+- Users archiving creator posts, galleries, and videos in one workflow
+- Non-technical users who want a browser extension instead of scripts
+- People who need feed-aware bulk download controls
+- Anyone organizing personal downloads into a cleaner local library
 
 ## Common Use Cases
 
-- Save videos from a creator's JustForFans feed for offline viewing
-- Download all visible content from a feed page in one click with "Download Visible"
-- Save images and gallery posts at full resolution, including multi-image carousel posts
-- Capture text posts alongside media for a complete archive
-- Download in your preferred video quality from all available resolutions
-- Use the per-post download button for targeted saves on individual items
-- Right-click any video to download via context menu for the quickest workflow
+- Save a creator feed for offline access
+- Download visible videos, images, and text in one pass
+- Export supported JustForFans videos as MP4
+- Archive gallery posts without opening every item manually
+- Use per-post buttons for targeted saves of individual items
 
-## What Makes JustForFans Downloader Different
+## Troubleshooting
 
-Generic downloaders have no understanding of how JustForFans structures its content. They miss videos, skip galleries, and ignore text posts entirely. SERP JustForFans Downloader is feed-aware and built from the ground up for this platform.
+**The extension is not finding posts**  
+Scroll through the feed first so the content becomes visible, then rescan.
 
-- **Feed-aware scanning** — Detects videos, images, galleries, and text posts that generic tools miss entirely
-- **Download button on every post** — No fumbling with popups or menus. Every feed item gets its own save button.
-- **Bulk save in one shot** — Click "Download Visible" and everything on screen saves at once. Scroll down, rescan, and repeat.
-- **Handles encrypted and protected streams** — Automatically converts protected video to standard MP4 files that play anywhere, with no extra steps
-- **No external software** — No desktop apps, no command line, no third-party websites. Just a browser extension that works where you already browse.
-- **Organized saves** — Files auto-save to a dedicated JustForFans folder so your Downloads directory stays clean
-- **Free trial** — 3 downloads included with no credit card required, so you can verify it works before committing
+**The video download is not listed**  
+Open the post and start playback so the player exposes the active media stream.
 
-## Trial & Pricing
+**New posts are missing after I scrolled**
+Use the rescan action after more content loads into the page.
 
-3 free downloads are included — no credit card required. Sign in with your email, verify with a one-time code, and your trial is ready immediately. Upgrade to a license for unlimited downloads at the [product page](https://serp.ly/justforfans-downloader).
+**The download failed partway through**
+Check your connection and refresh the page before starting again.
 
-- Works on Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex
-- Secure one-time-passcode sign-in — no passwords stored
-- All processing happens locally in your browser
-- Downloads auto-save to an organized JustForFans subfolder
-- Automatic update notifications for new versions
+**A video uses DRM or encryption**
+The extension includes DASH decryption support for encrypted streams commonly used on JustForFans.
+
+## Trial and Access
+
+- Includes **3 free downloads** so you can test the workflow first
+- Email sign-in uses secure one-time password verification
+- No credit card required for the trial
+- Unlimited downloads are available with a paid license
+
+Start here: [https://serp.ly/justforfans-downloader](https://serp.ly/justforfans-downloader)
+
+## Installation Instructions
+
+1. Open the latest release page: [GitHub Releases](https://github.com/serpapps/justforfans-downloader/releases/latest)
+2. Download the correct build for your browser.
+3. Install the extension.
+4. Sign in with your email and verify the one-time code.
+5. Open a JustForFans creator page and start downloading supported content.
 
 ## FAQ
 
-### Q: How do I download content from JustForFans?
+**Can it download more than just videos?**  
+Yes. It can also save supported images, gallery posts, and text posts.
 
-Go to any creator's page on JustForFans. Click the extension icon to see detected content organized by type (Videos, Images, Text). Click "Download Visible" to save everything, or use the download button on individual posts.
+**Can I bulk-download visible feed items?**  
+Yes. Use the "Download Visible" workflow for everything currently on screen.
 
-### Q: What types of content can I download?
+**Does it work without extra software?**
+Yes. The full workflow runs inside the browser extension.
 
-Videos (saved as MP4), images (full resolution, including gallery and carousel posts), and text posts.
-
-### Q: What quality options are available?
-
-The extension detects all available video qualities from the source. Formats are sorted by quality with the highest first and MP4 preferred.
-
-### Q: What format are downloaded videos?
-
-All videos are saved as standard MP4 files that play on any device or media player. Protected and encrypted streams are converted automatically.
-
-### Q: Where are my downloads saved?
-
-Content automatically saves to a JustForFans subfolder inside your browser's default Downloads directory.
-
-### Q: How many free downloads do I get?
-
-You get 3 free trial downloads after signing in with your email. After that, purchase a license for unlimited downloads.
-
-### Q: Does this work on Firefox?
-
-Yes — supports Chrome, Edge, Brave, Opera, Whale, Yandex, and Firefox.
-
-### Q: Why isn't the extension finding my content?
-
-Scroll through the creator's feed to load content first. The extension scans visible posts on the page. If issues persist, click the "Rescan" button or refresh the page.
-
-### Q: Can I download gallery or carousel posts?
-
+**Can I download gallery or carousel posts?**
 Yes. The extension automatically expands gallery and carousel posts to capture all images in multi-image posts.
 
-### Q: Is my data safe?
+**Where are my downloads saved?**
+Content automatically saves to a JustForFans subfolder inside your browser's default Downloads directory.
 
-Yes. All processing happens entirely in your browser — nothing is uploaded. Authentication uses secure one-time codes with no passwords stored.
+**Is my data safe?**
+Yes. All processing happens entirely in your browser. Authentication uses secure OTP with no passwords stored.
 
-### Q: What if a video uses encryption?
+## License
 
-The extension includes support for decrypting protected streams commonly used on JustForFans. Most protected content can be downloaded and saved as MP4.
+This repository is distributed under the proprietary SERP Apps license in the [LICENSE](LICENSE) file. Review that file before copying, modifying, or redistributing any part of this project.
 
-## Important Notes
+## Notes
 
-Users are responsible for ensuring they have the right to download content. This extension is intended for downloading content you own or have permission to download. A valid JustForFans subscription is required to access creator content. Content must be visible on the page, so scroll to load more items before downloading. Quality depends on what the source provides. An active internet connection is required.
+- Only download content you own or have explicit permission to save
+- An internet connection is required for downloads
+- Content must be visible on the page before it can be detected — scroll to load
+- A valid JustForFans subscription is required to access creator content
 
-## Keywords
+## About JustForFans
 
-`justforfans downloader` `justforfans video downloader` `download justforfans` `justforfans mp4` `justforfans browser extension` `save justforfans videos` `justforfans image downloader`
-
-## Get It
-
-- **Start here:** [SERP JustForFans Downloader](https://serp.cc/VDM-justforfans-downloader)
+JustForFans is a creator platform where videos, images, galleries, and text posts all live together in the feed. JustForFans Downloader is built to handle that mixed-content workflow more accurately than generic media download tools.
