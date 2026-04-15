@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "buildTag": "latest",
+  "description": "Justforfans Downloader gives you a fast, reliable way to save Justforfans videos for offline access. It is built for local-first downloading, preserves the best available quality, and keeps the workflow simple for people who need dependable saves without extra tooling.",
+  "input": "./INPUT_SCHEMA.json",
+  "name": "justforfans-downloader",
+  "readme": "../ACTOR.md",
+  "title": "JustForFans Downloader",
+  "version": "0.0"
+}
