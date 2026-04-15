@@ -123,7 +123,7 @@ Start here: [https://serp.ly/justforfans-downloader](https://serp.ly/justforfans
 
 ## Installation Instructions
 
-1. Open the latest release page: [GitHub Releases](https://github.com/serpapps/justforfans-downloader/releases/latest)
+1. Open the latest release page: [GitHub Releases](https://github.com/serpxxx/justforfans-downloader/releases/latest)
 2. Download the correct build for your browser.
 3. Install the extension.
 4. Sign in with your email and verify the one-time code.
