@@ -13,6 +13,11 @@ JustForFans Downloader is a browser extension built specifically for saving supp
 - Export supported video streams as MP4 files
 - Keep downloads organized in a dedicated JustForFans folder
 - Skip generic tools that miss protected or feed-scoped media
+
+## Get it Here
+
+Get it here: https://serp.ly/justforfans-downloader
+
 ## Table of Contents
 
 - [Why JustForFans Downloader](#why-justforfans-downloader)
