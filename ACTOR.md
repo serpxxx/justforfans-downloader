@@ -2,9 +2,11 @@
 
 > Save JustForFans videos, images, galleries, and text posts from creator feeds directly in your browser.
 
-## Links
+## Get it Here
 
 Get it here: https://serp.ly/justforfans-downloader
+
+![JustForFans Downloader](https://raw.githubusercontent.com/serpxxx/justforfans-downloader/main/assets/workflow-preview.webp)
 
 JustForFans Downloader is a browser extension built specifically for saving supported JustForFans content in a cleaner, browser-native workflow. It can detect videos, images, gallery posts, and text from visible feed items, organize them by content type, and export video as MP4 for easier offline viewing.
 
@@ -13,11 +15,6 @@ JustForFans Downloader is a browser extension built specifically for saving supp
 - Export supported video streams as MP4 files
 - Keep downloads organized in a dedicated JustForFans folder
 - Skip generic tools that miss protected or feed-scoped media
-
-## Get it Here
-
-Get it here: https://serp.ly/justforfans-downloader
-
 ## Table of Contents
 
 - [Why JustForFans Downloader](#why-justforfans-downloader)
